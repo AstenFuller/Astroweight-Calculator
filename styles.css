@@ -1,13 +1,48 @@
-.center {
+.inputSection {
     text-align: center;
 }
 
-#user-weight {
-    width: 300px;
+section div {
+    display: inline-block;
+}
+
+.inputDiv label {
+    display: block;
+}
+.container {
+    text-align: center;
+    border-style: solid;
+    max-width: 480px;
+    min-height: 50px;
+}
+
+.output {
+    text-align: center;
     
 }
 
-#planets {
-    width: 300px;
-    
+.addPlanetInput {
+        text-align: center;
+        padding-top: 30px;
+}
+
+.addPlanet {
+    display: inline-block;
+}
+
+.addPlanet label {
+    display: block;
+}
+
+.new-output {
+    text-align: center;
+}
+
+.checkPluto {
+    text-align: center;
+}
+
+.inputs {
+    width: 200px;
+    max-width: 200px;
 }

@@ -10,15 +10,43 @@
     <title>Astro Weight Calculator</title>
   </head>
   <body>
-     <!-- Write your markup here  -->
-    <div class="center">
-     <input id="user-weight"></input>
-     <select id="planets"></select>
-     <input id="planet-checkbox" type="checkbox" onclick="handleCheckBox()" />
-     <button id="calculate-button" onclick="handleClickEvent()">Calculate</button>
-     <p id="output"></p>
+    
+    <section class="inputSection">
+      <div class="inputDiv">
+        <label>Enter a weight</label>
+        <input id="user-weight" class="inputs"></input>
+      </div>
+      <div class="inputDiv"> 
+        <label>Select a planet</label>
+        <select id="planets" class="inputs"></select>
+      </div>
+        <button id="calculate-button" onclick="handleClickEvent()">Calculate</button>
+      </section> 
+      <div class="checkPluto">
+        <label id="checkClick">Check whether Pluto is a planet</label>
+        <input id="planet-checkbox" type="checkbox" onclick="handleCheckBox()" />
+      </div>
+    <section class="container">
+      <div class="output">
+        <p id="output"></p>
+      </div>
+    </section>
+    
+    <section class="addPlanetInput">
+      <div class="addPlanet">
+        <label>Add a planet</label>
+        <input id="new-planet" class="inputs" />
+      </div>
+      <div class="addPlanet" class="inputs">
+        <label>Add multiplier for planet</label>
+        <input id="new-planet-value" class="inputs" />
+      </div>
+      <button id="addPlanet" onclick="handleAddPlanet()">Add Planet</button>
+    </section>
+    <div class="new-output">
+      <p id="new-output"></p>
     </div>
-     
+      
 
     <script src="main.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
