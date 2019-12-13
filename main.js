@@ -20,7 +20,8 @@ function populateDropdown(item){
     var planetSelected = option.textContext = item[0];
     option.value = item[1];
     document.getElementById("planets").appendChild(option).innerHTML = planetSelected;
-   
+    option.setAttribute("id", item[0]);
+    
 }
 
 
@@ -38,5 +39,24 @@ function handleClickEvent() {
     var result = calculateWeight(userWeight, planetSize);
 
     document.getElementById("output").innerHTML = "If you were on " + planetName + ", you would weigh " + result + "lbs!";
+}
+
+    function handleCheckBox() {
+        if (planets[0].includes("Pluto")){
+            document.getElementById("Pluto").remove();
+            planets[0][0] = "";
+            
+        }else{
+            planets[0][0] = "Pluto";
+            let option = document.createElement("option");
+            option.setAttribute("id", "Pluto");
+            option.setAttribute("Value", 0.06);
+            option.innerHTML = "Pluto";
+            let pluto = document.getElementById("planets");
+            pluto.prepend(option);
+            pluto.selectedIndex = "0";
+           
+            
+        }
 
 }
